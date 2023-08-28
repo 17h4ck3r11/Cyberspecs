@@ -102,7 +102,7 @@ video {
     font-weight: 700;
     background-color: transparent;
     border: 1px solid rgb(251, 255, 255);
-    border-radius: 10px;
+    border-radius: 5px;
     margin-left: 2%;
     margin-right: 5%;
     transition: 0.3s linear ;
@@ -112,6 +112,7 @@ video {
 .contact-button:hover {
     background-color: #01FE03;
     color: black;
+    border: transparent;
     margin-bottom: 1.5%;
 }
 
@@ -159,6 +160,10 @@ main {
     justify-content: space-evenly;
 }
 
+.services p {
+    text-align: justify;
+}
+
 .services ul {
     margin-left: 5%;
 }   
@@ -171,7 +176,7 @@ main {
     background-color: transparent;
     color: rgb(251, 255, 255);
     border: 1px solid rgb(251, 255, 255);
-    border-radius: 10px;
+    border-radius: 5px;
     transition: 0.3s linear;
     margin-bottom: 2%;
 }
@@ -179,6 +184,7 @@ main {
 .view-more-button:hover {
     background-color: #01FE03;
     color:#000;
+    border: transparent;
     cursor: pointer;
 }
 
@@ -316,16 +322,32 @@ img {
    border-radius: 10px;
 }
 
+.back {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .back h2 {
     position: absolute;
+    margin-top: 2%;
 }
 
 .back p {
     position: absolute;
     top: 50px;
     font-size: 15px;
+    padding: 5%;
+    margin-top: 5%;
+    text-align: justify;
 }
 
+.back button {
+    margin-top: 70%;
+    margin-left: 1%;
+    width: 35%;
+    height: 15%;
+}
 
 /* style the maincontainer class with all child div's of class .front */
 .maincontainer > .front {
