@@ -43,7 +43,7 @@ video {
 /* ----------------------------------------------------- Navbar ----------------------------------------------------- */
 
 .header {
-    width: 98%;
+    width: 98vw;
     display: flex;
     margin: 1%;
     z-index: 99;
@@ -130,16 +130,22 @@ main {
     justify-content: flex-start;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.5);
-    width: 100%;
+    width: 100vw;
     height: 100vh;
 }
 
 .page1 h1 {
-    font-size: 5em;
+    font-size: 4rem;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    width: 70%;
+    width: 50%;
     margin: 5%;
     margin-top: 10%;
+}
+
+@media screen (max-width: 750px) {
+    .heading {
+        font-size: 12px;
+    }
 }
 
 /* ----------------------------------------------------- Page 2 ----------------------------------------------------- */
@@ -196,7 +202,7 @@ main {
 /* ----------------------------------------------------- Page 3 ----------------------------------------------------- */
 
 .page3 {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     background-image: linear-gradient(to top left, black, rgba(1, 254, 1, 0.5));
     display: flex;
@@ -212,6 +218,21 @@ main {
     display: flex;
     justify-content: space-evenly;
     width: 100%;
+    height: 90%;
+}
+
+@media (max-width:750px) {
+    .page3 {
+        height: 170vh;
+    }
+    .cards {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .card {
+        margin-bottom: 25px;
+    }
 }
 
 .card {
@@ -291,6 +312,8 @@ main {
     padding-right: 10%;
 }
 
+
+
 /* ----------------------------------------------------- Page 4 ----------------------------------------------------- */
 
 .page4 {
@@ -309,6 +332,21 @@ main {
 
 .courses {
     display: flex;
+    margin-bottom: 50px;
+}
+
+@media (max-width:1200px) {
+    .page4 {
+        height: 200vh;
+    }
+    .courses {
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 100%;
+    }
+    .maincontainer {
+        
+    }
 }
 
 .maincontainer {
