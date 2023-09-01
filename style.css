@@ -1,4 +1,7 @@
 /* --------------------------------------------------- Universals --------------------------------------------------- */
+:root {
+    --varheight: 110vh;
+}
 
 * {
     margin: 0;
@@ -31,14 +34,16 @@ html, body {
 }
 
 video {
+    float: left;
     position: fixed;
     right: 0;
     bottom: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     z-index: -1;
     object-fit: cover;
 }
+
 
 /* ----------------------------------------------------- Navbar ----------------------------------------------------- */
 
@@ -52,7 +57,7 @@ video {
     align-items: center;
     background-color: black;
     border-radius: 7px ;
-    height: 15%;
+    height: 15vh;
 }
 
 .links {
@@ -83,6 +88,7 @@ video {
 .nav-options {
     text-decoration: none;
     font-size: 1em;
+    display: none;
     color: rgb(251, 255, 255);
     padding: 0;
     font-weight: 700;
@@ -131,34 +137,31 @@ main {
     align-items: center;
     background-color: rgba(0, 0, 0, 0.5);
     width: 100vw;
-    height: 100vh;
+    height: var(--varheight);
 }
 
 .page1 h1 {
     font-size: 4rem;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    width: 50%;
+    width: 60%;
     margin: 5%;
     margin-top: 10%;
+    line-height: 65px;
+    letter-spacing: 2px;
 }
 
-@media screen (max-width: 750px) {
-    .heading {
-        font-size: 12px;
-    }
-}
 
 /* ----------------------------------------------------- Page 2 ----------------------------------------------------- */
 
 .page2 {
     display: flex;
-    width: 100%;
-    height: 100vh;
+    width: 100vw;
+    height: var(--varheight);
     background-color: black;
 }
 
 .page2>.services {
-    width: 70%;
+    width: 65%;
     margin-top: 2%;
     margin-left: 5%;
     display: flex;
@@ -168,10 +171,19 @@ main {
 
 .services p {
     text-align: justify;
+    line-height: 30px;
+    letter-spacing: 2px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    width: 100%;
 }
 
 .services ul {
+    width: 95%;
     margin-left: 5%;
+    text-align: justify;
+    line-height: 30px;
+    letter-spacing: 2px;
 }   
 
 .view-more-button {
@@ -195,9 +207,11 @@ main {
 }
 
 .page2>img {
-    width: 30%;
+    float: right;
+    width: 35%;
     align-self: flex-end;
 }
+
 
 /* ----------------------------------------------------- Page 3 ----------------------------------------------------- */
 
@@ -208,10 +222,12 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 3vh;
 }
 
 .page3 h1 {
-    margin: 3%
+    margin-top: 5%;
+    margin-bottom: 3%;
 }
 
 .cards {
@@ -219,20 +235,6 @@ main {
     justify-content: space-evenly;
     width: 100%;
     height: 90%;
-}
-
-@media (max-width:750px) {
-    .page3 {
-        height: 170vh;
-    }
-    .cards {
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-evenly;
-    }
-    .card {
-        margin-bottom: 25px;
-    }
 }
 
 .card {
@@ -312,13 +314,11 @@ main {
     padding-right: 10%;
 }
 
-
-
 /* ----------------------------------------------------- Page 4 ----------------------------------------------------- */
 
 .page4 {
     width: 100%;
-    height: 100vh;
+    height: 150vh;
     background-color: black;
     display: flex;
     flex-direction: column;
@@ -327,33 +327,38 @@ main {
 }
 
 .page4 h1 {
-    margin: 4%;
+    margin-top: 5%;
 }
 
 .courses {
     display: flex;
-    margin-bottom: 50px;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
-@media (max-width:1200px) {
-    .page4 {
-        height: 200vh;
-    }
-    .courses {
-        flex-direction: column;
-        justify-content: space-evenly;
-        height: 100%;
-    }
-    .maincontainer {
-        
-    }
+.card-section-1{
+    display: flex;
+    width: 100vw;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
+
+.card-section-2 {
+    display: flex;
+    width: 100vw;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 5%;
 }
 
 .maincontainer {
     width: 302px;
     height: 299px;
-    margin: 10px;
-    float: left; /* stack each div horizontally */
+    float: left; 
 }
 
 img {
@@ -452,3 +457,235 @@ footer {
     background: rgba(251, 255, 255, 0.3);
 }
 
+/* ----------------------------------------------------- Breakpoints ----------------------------------------------------- */
+
+@media (min-width:0px) and (max-width:500px) {
+    .page1 {
+        height: 50vh;
+    }
+    .page1 h1 {
+        width: 100%;
+        text-align: center;
+        font-size: 1.5em;
+    }
+    .page2 {
+        height: 130vh;
+        width: 100vw;
+    }
+
+    .page2 h1 {
+        width: 80vw;
+        text-align: center;
+    }
+
+    .page2 img {
+        display: none;
+    }
+
+    .page2 p {
+        width: 85vw;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+
+    .page2 ul li {
+        width: 80vw;
+    }
+
+    .view-more-button {
+        height: 5%;
+        width: 50%;
+        margin-left: 40%;
+    }
+
+    .page3 {
+        height: 200vh;
+    }
+
+    .cards {
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .page4 {
+        height: 210vh;
+    }
+    
+    .courses {
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        margin-bottom: 0%;
+        margin-top: 0%;
+    }
+    
+    .card-section-1, .card-section-2 {
+        height: 50%;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-bottom: 10%;
+        margin-top: 0%;
+    }
+}
+
+
+@media (min-width:501px) and (max-width:650px) {
+    .page4 {
+        height: 140vh;
+        margin-bottom: 0%;
+        margin-top: 0%;
+    }
+    .card-section-1, .card-section-2 {
+        flex-direction: column;
+    }
+}
+
+@media (min-width:651px) and (max-width:770px) {
+    :root {
+        --varheight:65vh;
+    }
+
+    .header {
+        height: 10vh;
+    }
+
+    .page1 {
+        height: 40vh;
+        width: 100vw;
+    }
+
+    .page1 h1 {
+        font-size: 2.5em;
+        width: 85vw;
+        text-align: center;
+    }
+
+    .page2 {
+        height: 90vh;
+    }
+
+    .page2>.services{
+        width: 85vw!important;
+    }
+
+    .page2 img {
+        display: none;
+        width: 0vw;
+    }
+
+    .page2 h1 {
+        text-align: center;
+        margin-top: 5%;
+    }
+
+    .page2 p {
+        margin-top: 2%;
+        margin-bottom: 2%;
+    }
+
+    .page2 .services ul {
+        width: 95%;
+    }
+    
+    .view-more-button {
+        width: 30%;
+        margin-bottom: 12px;
+    }
+    
+    .page3 {
+        height: 180vh;
+    }
+    .cards, .courses {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 100%;
+    }
+
+    .page4 {
+        height: 120vh;
+    }
+}
+
+@media (min-width:771px) and (max-width:1000px) {
+    :root {
+        --varheight:65vh;
+    }
+
+    .header {
+        height: 10vh;
+    }
+
+    .page1 {
+        height: 50vh;
+    }
+
+    .page1 h1 {
+        font-size: 3.5em;
+        width: 85vw;
+        text-align: center;
+    }
+
+    .page2>.services{
+        width: 45vw;
+    }
+
+    .page2 img {
+        width:55vw;
+        float:right;
+        align-self: flex-end;
+    }
+
+    .page2 .services ul {
+        width: 95%;
+    }
+    
+    .view-more-button {
+        width: 30%;
+        margin-bottom: 12px;
+    }
+    
+    .page3 {
+        height: 60vh;
+    }
+    .cards, .card-section-1,.card-section-2 {
+        /* flex-direction: column; */
+        align-items: center;
+        justify-content: space-evenly;
+        height: 100%;
+        margin-bottom: 0%;
+        margin-top: 0%;
+    }
+
+    .page4 {
+        height: 140vh;
+    }
+
+}
+
+@media (min-width:1001px) and (max-width:1200px) { 
+    .page1 {
+        height: 70vh;
+    }
+    .page1 h1 {
+        width: 60%;
+        font-size: 3em;
+        line-height: 50px;
+        letter-spacing: 2px;
+    }
+    .page3 {
+        height: 75vh;
+    }
+    .view-more-button {
+        width: 30%;
+    }
+    .page4 {
+        height: 120vh;
+    }
+    .card-section-1 {
+        margin-bottom: 0%;
+        padding: 2%;
+    }
+}
